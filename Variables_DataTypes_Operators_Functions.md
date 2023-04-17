@@ -80,3 +80,67 @@ Variables can store data that may change during program execution. So hard-codin
 Which kind of operator is the = operator?
 
 It's an assigment operator (assigns a value).
+
+## Data Types
+
+Numbers: 2, -3, 22.956 important for calculations and code where you need to work with a number
+
+Strings: "Hi", 'Hi', `Hi` is imporatant for outputting results, gathering input.
+
+## Using Constants
+
+eg. const defaultResult = 0;
+let currentResult = defaultResult;
+
+this will assign defaultResult to currentResult but currentResult will be allowed to change.
+
+defaultResult will never change at any point.
+
+## More on Strings
+
+CANNOT mix single or double quotes.
+
+best way to work with variables inside a string. is using back ticks or called template literal.
+
+e.g.
+
+let calculationDescription = `(${defaultResult} + 10) * 3 / 2 - 1`
+
+\n inside a string will add a line break
+
+## Quiz Questions (Data types & Constants)
+
+Where do "data types" come into play?
+
+Data you work with in your code is of different type - e.g. numbers, text, booleans, etc.
+
+Is 30 the same as '30'?
+
+NO, one is a num the other a string.
+
+Given that JavaScript is a weakly typed, dynamic language, would you expect that this code works?
+
+let myName = 'Max';
+myName = 30;
+
+Indeed, this snippet works. Even though the type of data changes when we assign a new value, the variable won't complain. Variables in JavaScript are NOT tied to data types.
+
+## Introducing Functions
+
+Can be reffered as "code on demand" e.g
+
+function greetUser(name) {
+alert("Hi" + name);
+}
+
+greetUser();
+
+You can (but dont have to) use parameters and you can (but dont have to ) return values (via return).
+
+you call a Function once you want to use it e.g.
+
+greetUser('Max');
+
+can use it as often as you want, passing different paramer values
+
+Every fuinction execuiton then runs independent from (possible) other executions.
