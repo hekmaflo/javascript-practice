@@ -238,3 +238,24 @@ Everywhere in the script, including functions.
 What's a "shadowed variable"?
 
 A local variable , declared in a function that also exists as a global variable.
+
+## parseInt
+
+is used to turn a string to a intiger e.g.
+paresInt(userInput.value); or +userInput.value
+
+you can also turn intigers to strings with toString();
+
+e.g currentResult.toString();
+
+## shorthand operators
+
+currentResult += enteredNumber;
+currentResult -= enteredNumber;
+currentResult \*= enteredNumber;
+currentResult /= enteredNumber;
+
+## More Core Data Types
+
+Booleans have value of true/false
+important for conditional code and situations wehre you only have 2 options.

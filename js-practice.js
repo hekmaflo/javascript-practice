@@ -51,3 +51,40 @@ add(1, 2);
 // this function will give a value to the result at the beggining of this code.
 
 // but it is better to keep it in the first version since it will not change any global code in unexpected ways.
+
+// Function & Event Listener practice.
+
+const task3Element = document.getElementById("task-3");
+
+const funcOne = () => {
+  alert("Hello");
+};
+
+const funcTwo = (name) => {
+  alert(`Hello, ${name}.`);
+};
+
+funcOne();
+funcTwo("hector");
+
+// this attaches an click event listener to the div that has element id of task-3
+task3Element.addEventListener("click", funcOne);
+
+const funcThree = (str1, str2, str3) => {
+  alert(`Hello, ${str1}, ${str2}, ${str3}`);
+};
+
+funcThree("A", "B", "C");
+
+// ARRAYS
+
+let logEntries = [1, 2, 3];
+
+let emptyLogEntries = [];
+
+emptyLogEntries.push(enteredNumber);
+
+//accesses all the array
+console.log(emptyLogEntries);
+//accesses single item in the array
+console.log(emptyLogEntries[0]);
