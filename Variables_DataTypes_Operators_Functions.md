@@ -259,3 +259,26 @@ currentResult /= enteredNumber;
 
 Booleans have value of true/false
 important for conditional code and situations wehre you only have 2 options.
+
+Objects {name: "max", age:31} contain different types of data. Important for grouped/related data, helps you with organizing date
+
+Arrays eg. [1,3,5] are list of data, important for list data, unkown amoutns of data.
+
+# Using arrays
+
+let logEntries = [1, 2, 3];
+
+# Using Objects
+
+const logEntry = {
+operation: "ADD",
+prevResult: initialResult,
+number: enteredNumber,
+result: currentResult,
+};
+// this will push logEntry information as an object to the logEntries array.
+logEntries.push(logEntry);
+// this will show all entries pushed to logEntries
+console.log(logEntries);
+// to single key value pair of an object
+console.log(logEntry.number);

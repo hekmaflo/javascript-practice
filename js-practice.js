@@ -88,3 +88,18 @@ emptyLogEntries.push(enteredNumber);
 console.log(emptyLogEntries);
 //accesses single item in the array
 console.log(emptyLogEntries[0]);
+
+// OBJECTS
+
+const logEntry = {
+  operation: "ADD",
+  prevResult: initialResult,
+  number: enteredNumber,
+  result: currentResult,
+};
+// this will push logEntry information as an object to the logEntries array.
+logEntries.push(logEntry);
+// this will show all entries pushed to logEntries
+console.log(logEntries);
+// to single key value pair of an object
+console.log(logEntry.number);
