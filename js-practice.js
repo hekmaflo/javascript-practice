@@ -103,3 +103,23 @@ logEntries.push(logEntry);
 console.log(logEntries);
 // to single key value pair of an object
 console.log(logEntry.number);
+
+// reusable log entry function
+
+function writeToLog(
+  operationIdentifier,
+  prevResult,
+  operationNumber,
+  newResult
+) {
+  const logEntry = {
+    operation: operationIdentifier,
+    prevResult: prevResult,
+    number: operationNumber,
+    result: newResult,
+  };
+  logEntries.push(logEntry);
+  console.log(logEntries);
+}
+
+writeToLog("ADD", initalResult, enteredNumber, currentResult);

@@ -282,3 +282,82 @@ logEntries.push(logEntry);
 console.log(logEntries);
 // to single key value pair of an object
 console.log(logEntry.number);
+
+## Quiz (Arrays, Objects)
+
+What's an "Array"?
+
+A list of data of any kind.
+
+What's an "Object"?
+
+Grouped data, structured in key-value pairs.
+
+How do you extract a single element from an array?
+
+myArray[0]
+
+How do you extract 55 from the following array?
+
+const ages = [55, 44, 33, 22, 11, 0];
+
+ages[0]
+
+Consider this object:
+
+const user = {
+name: 'Max',
+age: 30
+};
+How do you extract the age?
+
+user.age
+
+# Re-usable Functions using Objects
+
+function writeToLog(operationIdentifier, prevResult, operationNumber, newResult) {
+const logEntry = {
+operation: operationIdentifier,
+prevResult: prevResult,
+number: operationNumer,
+result: newResult
+}
+logEntries.push(logEntry);
+console.log(logEntries);
+}
+
+# Special Values
+
+undefined - defalut value of uninitialized variables.
+
+You should't assign undefined as a value manually
+
+Null - Never assumed by default
+
+you can assign this a value if you want to reset or clear a variable
+
+NOT EQUAL
+
+NaN - not a type its a type number and can threfore be used in calculations.
+
+## typeof
+
+to see what type of datatype is being used. e.g.
+
+typeof "Max"
+typeof 1
+typeof true
+typeof [1,2,3]
+
+## Quiz (undefined, Nan, Null)
+
+When is the undefined value coming into play?
+
+Declared variables where you havent assigned a value yet are undefined
+
+Is undefined exactly the same as null?
+No, whilst the two values are similar, they're not equal. undefined is a special type and the default value for undefined variables, null is actually of type object and never a default value of anything
+
+When do you get NaN as a result?
+
+when running a math calculation with invalid inputs e.g. numbers and text
