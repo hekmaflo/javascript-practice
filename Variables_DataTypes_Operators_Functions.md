@@ -171,3 +171,70 @@ the return statement will now return the value of result. at the moment it will 
 const additionResult = add(1,2);
 
 this will save the result inro the additionResult variable.
+
+## Intro to Global & Local Scopes
+
+Refering back to our function we can have:
+
+let result; (in the global scope)
+
+function add(num1, num2) {
+result = num1 + num2
+return result;
+}
+
+add(1,2);
+
+this would change the result variable in the global scope.
+
+but it is better to keep it in the first version since it will not change any global code in unexpected ways. refere line 162
+
+Using a global variable inside a function, is possible and this process is called shadowed variables.
+
+### More on return
+
+anything after return will statement not work.
+
+when adding an event listener make sure you dont add any parameters. e.g.
+
+addBtn.addEventListener('click', add);
+
+this is executing functions indirectly.
+
+in the lesson the function to get the info of num1 and num2 looks like:
+
+function add(){
+const result = currentResult + userInput.value;
+return result;
+}
+
+addBtn.addEventListener('click', add);
+
+## Quiz (functions)
+
+What's a "Function"?
+A function defines code which dosen't execute right away but which can be executed multiple times by calling the function.
+
+Please explain what's what in this function:
+
+function greetUser(name) {
+alert('Hi ' + name);
+}
+
+function is the keyword, greetUser is the function name, name is the parameter, and alert("Hi" + name); is the function body.
+
+What are "function parameters"?
+
+Data that can be provided to the functon(input) - available only inside of the function, like local variables.
+
+Which kind of variables live in the "local scope"?
+
+variables declared inside of functions.
+
+Where can you use "global scope" variables?
+
+Everywhere in the script, including functions.
+
+What's a "shadowed variable"?
+
+A local variable , declared in a function that also exists as a global variable.

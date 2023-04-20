@@ -1,6 +1,7 @@
 // Defining & Declaring Variables
 
 let currentResult = 0;
+let result;
 
 currentResult = currentResult + 10 * 3;
 
@@ -38,3 +39,15 @@ add(1, 2);
 const additionResult = add(1, 2);
 
 //this will put the result into the additonResult variable.
+
+//MORE on returning FUnctions
+
+function add(num1, num2) {
+  result = num1 + num2;
+  return result;
+}
+
+add(1, 2);
+// this function will give a value to the result at the beggining of this code.
+
+// but it is better to keep it in the first version since it will not change any global code in unexpected ways.
