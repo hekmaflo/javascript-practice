@@ -11,3 +11,19 @@ if (!isLoggedIn2) {
 } else {
   // This would execute because !isLoggedIn yields false => else block executes
 }
+
+const age = 30;
+
+let userCategory; // should be 'child', 'adult' or 'senior'
+
+function solve() {
+  // Todo: Set userCategory conditionally
+  // Important: You must put your condition into this solve function!
+  if (age < 18) {
+    userCategory = "child";
+  } else if (age >= 18 && age < 65) {
+    userCategory = "adult";
+  } else if (age >= 65) {
+    userCategory = "senior";
+  }
+}
