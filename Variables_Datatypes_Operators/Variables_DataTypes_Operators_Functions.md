@@ -361,3 +361,5 @@ No, whilst the two values are similar, they're not equal. undefined is a special
 When do you get NaN as a result?
 
 when running a math calculation with invalid inputs e.g. numbers and text
+
+# Defer & Async
