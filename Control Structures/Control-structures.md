@@ -223,3 +223,19 @@ if (userAge) {
 }
 
 userAge still holds 30 as a value.
+
+## CONDITIONAL EXPRESSION / TERNARY OPERATOR
+
+e.g const userName= isLogin? 'Max' : null
+
+max would be the value if condition is true and null would be the value is condition is false
+
+## Logical operators and shorthands
+
+boolean coercion via double NOT operator (!!)
+
+default value assignment via OR operator ||
+
+e.g const name = someInput || 'Max'
+
+this would yield true
