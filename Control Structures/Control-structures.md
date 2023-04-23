@@ -90,3 +90,71 @@ calculationType !== 'ADD' && calculationType !== 'SUBTRACT' &&calculationType !=
 for more info:
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+## Quiz (Booleans)
+
+Which part of the if statement will be executed in the below example?
+
+const val1 = 10;
+const val2 = 5;
+if (val1 + val2 > 16) {
+// A
+} else {
+// B
+}
+
+B will be executed, val1 + val2 results in a value of 15, which is smaller than 16, hence we reach the else block (B)!
+
+Which part of the if statement will be executed in the below example?
+
+const val1 = 10;
+const val2 = 5;
+if (val1 + val2 < 15) {
+// A
+} else if (val1 === '10') {
+// B
+} else if (val2 > 4) {
+// C
+} else {
+// D
+}
+
+C will be executed
+
+Which part of the if statement will be executed in the below example?
+
+const val1 = 10;
+const val2 = 5;
+if (val1 + val2 === '15') {
+// A
+} else if (val1 + val2 == 15) {
+// B
+} else if (val2 > 4) {
+// C
+} else {
+// D
+}
+
+B will be executed, val1 + val2 is equal to 15. Here we even compare that number to another number, so we could've used "===" as well. But for "==" (where we only compare the value, not the type), the result is of course still "true".
+
+How many block of an if-else if-else statement can be executed?
+
+Only one ( or none, if no condition is met and no else block exists.) In an if statement, you will never execute more than one block. If no condition is met and no else block exists (which is not a must-have), NO code will be executed
+
+What's the role of the ! operator?
+
+It negates a condition (e.g. check for inequality).
+
+What does this expression yield?
+
+5 + 2 === 7 && 4 > 5 || 'Hi' === 'Hi'
+
+It yields true
+
+That's correct! The first part (the && part) yields false because 4 is NOT greater than 5. But the second part (after ||) yields true ('Hi' is equal to 'Hi').
+
+What's evaluated first in the below expression?
+
+5 + 5 === 10 && 3 < 5 && 10 > 9 || 'Hi' === 'Hi'
+
+the 5 + 5 part. the addition operator has precedence over the logic operators (&& and ||).
