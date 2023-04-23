@@ -285,3 +285,206 @@ Because of the above-described behaviors, you often use || in JavaScript to assi
 const enteredValue = ''; // let's assume this is set based on some input provided by the user, therefore it might be an empty string
 
 const userName = enteredValue || 'PLACEHOLDER'; // will assign 'PLACEHOLDER' if enteredValue is an empty string
+
+## Quiz (Logical Operators)
+
+What's stored in userName at the end of the below code?
+
+const enteredValue = '';
+const userName = enteredValue || 'DEFAULT';
+
+answer is 'DEFAULT'
+
+'' is a falsy value, hence the || operator moves on to the second operand (i.e. the value AFTER ||) and returns that value.
+
+What's stored in userName at the end of the below code?
+
+const enteredValue = '';
+const userName = enteredValue || null;
+
+answer is null
+
+The first value (which is an empty string) is falsy and hence the second value (second operand) is returned - even if that operand is also falsy (which it is in this example).
+
+What's stored in userName at the end of the below code?
+
+const enteredValue = 'Max';
+const userName = enteredValue || 'Anna';
+
+answer 'Max'
+
+'Max' is a non-empty string and therefore a truthy value. The || operator returns that first value (first operand) if it is truthy.
+
+What's stored in userName at the end of the below code?
+
+const enteredValue = 'Max';
+const userName = enteredValue && 'Anna';
+
+answer Anna
+
+if the first value is truthy, the && operator ALWAYS returns the second value (second operand).
+
+What's stored in userName at the end of the below code?
+
+const enteredValue = '';
+const userName = enteredValue && 'Anna';
+
+answer '' empty string
+
+If the first operand is falsy, && always returns the first operand, NEVER the second one.
+
+What's stored in userName at the end of the below code?
+
+const enteredValue = 'Max';
+const userName = enteredValue && '';
+
+answer '' emptry string
+
+If the first value if truthy, the && operator ALWAYS returns the second value (the second operand), even if that operand should be falsy.
+
+What does the follow code yield?
+
+const userName = 'Max';
+console.log(!!userName);
+
+answer is true
+
+! negates (inverts) a value AND always returns/ produces a boolean. So !'Max' would yield false (because 'Max' is truthy => negated + boolean = false). With the additional ! operator, the value is negated again, so false becomes true.
+
+What does the follow code yield?
+
+const userName = 'Max';
+console.log(!userName);
+
+answer is false
+
+The ! operator negates the value and generates a boolean. 'Max' is truthy, so the negated boolean version indeed is false.
+
+# Switch-case Statement
+
+switch(ev){
+case LOG_EVENT_PLAYER_ATTCK:
+logEntry.target = "MONSTER"
+break;
+case LOG_EVENT_PLAYER_STRONG_ATTACK:
+logEntry.target = "PLAYER"
+break;
+
+}
+
+# LOOPS
+
+to execute code multiple times.
+
+4 types:
+
+for loop - execude code a certain amount of times via variable.e.g.
+
+for (let i =0; i < 3; i++){
+console.log(i)
+}
+
+for-of loop - execute for every element in an array
+
+for (const el of array) {
+console.log(el);
+}
+
+for-in loop - execute for every key in an object
+
+for (const key in obj){
+console.log(key);
+console.log(obj[key]);
+}
+
+while loop - execute code as long as condition is true
+
+while (isLoggedInd){
+...
+}
+
+### More while loops
+
+let j = 0
+
+while (j < e){
+console.log('------')
+j++;
+}
+
+// do while loop
+let j = 0;
+
+do {
+console.log(j);
+j++;
+} while (j < 3);
+
+## Quiz (Loops - Basics)
+
+Why do Loops exist?
+
+Because you sometimes need to execute the same code(maybe with different, dynaimc values) multilpe times.
+
+What does the following loop produce as output?
+
+let sum = 0;
+for (let i = 2; i <= 6; i++) {
+sum = sum + i;
+}
+console.log(sum); // ???
+
+answer, 20
+
+The loop starts at i = 2 and then runs up to (including) i = 6. All numbers are added together: 2 + 3 + 4 + 5 + 6 = 20
+
+What does the following loop produce as output?
+
+let sum = 0;
+for (const i = 2; i <= 6; i++) {
+sum = sum + i;
+}
+console.log(sum); // ???
+
+AN error is thrown, You must not use const for the variable that should change with every iteration (because constants can't change).
+
+What does the following loop produce as output?
+
+let sum = 0;
+for (let i = 0; i < 3; i++) {
+for (let j = 5; j > 2; j--) {
+sum = sum + j + i;
+}
+}
+console.log(sum); // ???
+
+Answer is 45, The inner loop runs for every execution of the outer loop - and it then counts down from 5 to 3. So we add 0 + 5 + 0 + 4 + 0 + 3 + 0 + 5 + 1 + 4 + 1 + 3 + 1 + 5 + 2 + 4 + 2 + 3 + 2 = 45
+
+What does the following loop produce as output?
+
+let sum = 0;
+for (let i = 0; i < 3; i++) {
+for (let j = 5; j > 2; j--) {
+sum = j + i;
+}
+}
+console.log(sum); // ???
+
+answer is 5, note that we DON'T add sum when we produce a new sum. So sum is always just j + i - which means that for the last iteration of that overall loop, we execute 3 (j) + 2 (i) = 5
+
+What does the following loop produce?
+
+const hobbies = ['Sports', 'Cooking', 'Coding'];
+let favoriteHobby;
+for (const hobby of hobbies) {
+favoriteHobby = hobby;
+}
+console.log(favoriteHobby);
+
+answer is 'Coding', favoriteHobby stores the hobby in each iteration - so the last iteration's value survives.
+
+What's the main difference between for-of and for-in loops?
+
+for-of loops are used for arrays, for-in loops for objects.
+
+the primary difference is that for-of loops were built to give you an easy way to loop through array elements, for-in loops exist to make going through object properties easy.

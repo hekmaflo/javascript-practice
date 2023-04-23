@@ -27,3 +27,77 @@ function solve() {
     userCategory = "senior";
   }
 }
+
+// SWITCH CASE
+
+switch (ev) {
+  case LOG_EVENT_PLAYER_ATTCK:
+    logEntry.target = "MONSTER";
+    break;
+  case LOG_EVENT_PLAYER_STRONG_ATTACK:
+    logEntry.target = "PLAYER";
+    break;
+  default:
+    logEntry = {};
+}
+
+// LOOPS
+
+// for loop
+
+for (let i = 0; i < 3; i++) {
+  console.log(i);
+}
+
+// for-of loop execute for every element in an array
+
+for (const el of array) {
+  console.log(el);
+}
+
+//for in loop
+for (const key in obj) {
+  console.log(key);
+  console.log(obj[key]);
+}
+
+//example if accessing object key value pairs in an array
+
+let i = 0;
+
+for (const logeEntry of battleLog) {
+  console.log(`#${i}`);
+  for (const key in logeEntry) {
+    console.log(key);
+    console.log(logEntry[key]);
+    // this will access the value of the inputed key. that the loop will get as it iterates.
+  }
+  i++;
+}
+
+// while loop
+
+while (isLoggedInd) {}
+
+//e.g
+
+let randonNumbers = [];
+
+let finished = false;
+
+while (!finished) {
+  const rndNumber = Mathrandom();
+  randonNumbers.push(rndNumber);
+  if (rndNumber > 0.5) {
+    finished = true;
+    console.log(randonNumbers);
+  }
+}
+
+// do while loop
+let j = 0;
+
+do {
+  console.log(j);
+  j++;
+} while (j < 3);
