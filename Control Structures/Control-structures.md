@@ -158,3 +158,68 @@ What's evaluated first in the below expression?
 5 + 5 === 10 && 3 < 5 && 10 > 9 || 'Hi' === 'Hi'
 
 the 5 + 5 part. the addition operator has precedence over the logic operators (&& and ||).
+
+# Falsy and Thruthy Values
+
+How JS ecaluates conditions. e.g.
+
+Conts nameInput = "Max"
+
+if (nameInput === "Max"){...}
+
+const nameInput = 'Max';
+
+if (nameInupt) {...} this would be truthy because nameInput has a string
+
+0 in a variable would be considered false
+
+Negative numbers are considered as TRUE
+
+empty string is FALSE
+
+all other objects or arrays TRUE
+
+null, undefined, NaN FALSE
+
+## Quiz (Truthy Falsy)
+
+Which part of the code will be executed in the below if statement?
+
+const userName = 'Max';
+if (userName) {
+// A
+} else if (userName === 'Max') {
+// B
+} else {
+// C
+}
+
+A will be executed
+
+Which part of the code will be executed in the below if statement?
+
+let age;
+if (age) {
+// A
+} else if (age === null) {
+// B
+} else {
+// C
+}
+
+C is exeuted
+
+Is -10 a "truthy" or a "falsy" value?
+
+its a Truthy value.
+
+What's stored in userAge after the below code executed?
+
+const userAge = 30;
+if (userAge) {
+// do something
+} else {
+// do something else...
+}
+
+userAge still holds 30 as a value.
