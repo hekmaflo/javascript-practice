@@ -488,3 +488,81 @@ What's the main difference between for-of and for-in loops?
 for-of loops are used for arrays, for-in loops for objects.
 
 the primary difference is that for-of loops were built to give you an easy way to loop through array elements, for-in loops exist to make going through object properties easy.
+
+## Controlling loops with break
+
+let i = 0;
+
+for (const logeEntry of battleLog) {
+console.log(`#${i}`);
+for (const key in logeEntry) {
+console.log(key);
+console.log(logEntry[key]);
+// this will access the value of the inputed key. that the loop will get as it iterates.
+}
+i++;
+break;
+}
+
+you can use break to break out of a loop. This would only show you the first element.
+
+## Quiz (break & continue)
+
+What does break do?
+it ends/stops loop execution.
+
+What does continue do?
+
+it continue with the next loop iteration and stops the current one.
+
+What's the result of the below code?
+
+let sum = 0;
+for (let i = 0; i < 5; i++) {
+sum = sum + i;
+break;
+}
+console.log(sum); // ???
+
+Answer is 0, It's NOT 0 because the loop would never execute though. It runs once but the first value for i is equal to 0. So sum = 0 + 0 => stays 0. After that first execution, break stops the loop and hence the sum of 0 is being output.
+
+What's the result of the below code?
+let sum = 0;
+for (let i = 0; i < 5; i++) {
+for (let j = 0; j < 2; j++) {
+sum = sum + i + j;
+break;
+}
+}
+console.log(sum); // ???
+
+Answer is 10, The inner loop always stops after the first execution, so j never exceeds a value of 0 (and hence doesn't contribute much to the sum calculation). But the outer loop is NOT stopped by break (only the "nearest" loop is). So the sum DOES take the changing value of i into account.
+
+What's the result of the below code?
+
+let sum = 0;
+for (let i = 0; i < 5; i++) {
+for (let j = 0; j < 2; j++) {
+sum = sum + i + j;
+continue;
+}
+}
+console.log(sum); // ???
+
+Answer 25, continue actually has no effect here. We call it after all inner loop code has been executed, so we move on to the next iteration - something that would've happened anyways. The outer loop is not affected by continue (it affects its "nearest" loop).
+
+Question 6:
+What's the result of the below code?
+
+let sum = 0;
+for (let i = 0; i < 5; i++) {
+for (let j = 0; j < 2; j++) {
+if (i >= 2) {
+continue;
+}
+sum = sum + i + j;
+}
+}
+console.log(sum); // ???
+
+Answer is 4, The inner loop basically becomes useless once i reaches a value of 2. The sum isn't changed anymore from that point on. Hence the overall result is 0 (i) + 0 (j) + 0 (i) + 1 (j) + 1 (i) + 0 (j) + 1 (i) + 1 (j) = 4
