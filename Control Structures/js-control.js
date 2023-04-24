@@ -101,3 +101,15 @@ do {
   console.log(j);
   j++;
 } while (j < 3);
+
+// try catch
+
+try {
+  chosenMaxLife = getMaxLifeValues();
+  //this will be executed first and if it fails it will go to the catch
+} catch (error) {
+  console.log(error);
+  chosenMaxLife = 100;
+} finally {
+  // this will always execute
+}

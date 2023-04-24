@@ -566,3 +566,17 @@ sum = sum + i + j;
 console.log(sum); // ???
 
 Answer is 4, The inner loop basically becomes useless once i reaches a value of 2. The sum isn't changed anymore from that point on. Hence the overall result is 0 (i) + 0 (j) + 0 (i) + 1 (j) + 1 (i) + 0 (j) + 1 (i) + 1 (j) = 4
+
+## Error Handling
+
+situations to use Error handling User input Errors, network errors.
+
+try {...} catch(error){}
+
+try {
+chosenMaxLife = getMaxLifeValues();
+//this will be executed first and if it fails it will go to the catch
+} catch (error){
+console.log(error);
+chosenMaxLife = 100;
+}
