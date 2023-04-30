@@ -709,3 +709,5 @@ console.log('Hello there!')
 };
 
 person.greet();
+
+### Functions are Objects
