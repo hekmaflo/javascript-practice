@@ -710,4 +710,34 @@ console.log('Hello there!')
 
 person.greet();
 
-### Functions are Objects
+### Functions expressions vs functions declarations
+
+function declaration
+
+function multiply(a,b){
+return a\*b;
+}
+
+hoisted to top, can be declared anywhere in the file. (i.e. also after it's used)
+
+function expression
+
+const multiply = function(a,b){
+return a\*b;
+}
+
+hoisted to top but not initialized/ defined cant be declaterd anywhere in the file (i.e. not afer it's used)
+
+### anon functions
+
+const start = function(){
+console.log('Game is starting...')
+}
+
+start.GameBtn.addEventListenr('click', start)
+
+can also be used like
+
+start.GameBtn.addEventListenr('click', function(){
+console.log('Game is starting...')
+})
