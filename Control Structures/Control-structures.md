@@ -580,3 +580,132 @@ chosenMaxLife = getMaxLifeValues();
 console.log(error);
 chosenMaxLife = 100;
 }
+
+Which kind of error should you typically handle via try-catch?
+
+Network errors
+
+What goes into the try {} block?
+
+the code that could throw and error.
+
+What goes into the catch {} block?
+
+The error handling and fallback logic.
+
+# Behind the Scenes of Javascript.
+
+## ES5 vs ES6 syntax
+
+var vs let & const
+
+let is able to change
+const not able to change
+
+let- creates a variable
+var- creates a variable
+const - creates a constant
+
+var - available always
+let - Available since ES6
+const - Available since ES6
+
+var - create variables at Function & global scope
+
+let - Block Scope
+
+const - Block Scope
+
+## Hoisting
+
+## Quiz (JS specialties)
+
+What's the most important difference between var and let/ const?
+
+var has global/function(local) scope, let and const have block scope.
+
+Does this code execute correctly?
+
+console.log(name);
+const name = 'Max';
+
+No, const and let don't work like var when it comes to hoisting (this example would've worked with var).
+
+## Primitive vs Reference Values
+
+Primitive values and Reference Values are the Two categorie of types/values in JavaScript
+
+Primitive values: Strings, Numbers, Booleans, null, undefined, symbol. stored in stack memory and do not take much memory when used.
+
+Copying a variable ( = assign to a different variable) copies the value.
+
+let name = 'Max'
+
+let anotherUser = name;
+
+anotherUser is Max
+
+name = 'Manuel';
+
+anotherUser is still equal to Max
+
+Reference Values:
+All other objects
+
+Store in memory(heap) variable stores a pointer (address) to location in memory.
+
+Copying a variable(= assignt to different variable) copies the pointer/reference
+
+let hobbies = ['Sports']
+
+## Spread operator
+
+e.g.
+
+let person = {age: 32}
+
+let yetAnotherPerson = { ...person}
+
+this will copy all the key value pairs of the person object.
+
+// you can change person for e.g.
+
+person.age = 30;
+
+yetAnotherPerson would still be 32
+
+---
+
+let hobbies = ['Sports'];
+
+let moreHobbies = [...hobbies]
+
+hobbies.push('Cooking');
+
+moreHobbies would still only have Sports
+
+# More About Functions
+
+different ways of creatng functions
+
+anon functions
+
+callback functions & fnctions in functions
+
+default arguments & rest operator
+
+## Functions vs Methods
+
+function startGame(){
+console.log('Game is starting...')
+}
+
+method is inside an object like so:
+
+const persone = {
+greet: function greet(){
+console.log('Hello there!')
+}
+};
+
+person.greet();
