@@ -741,3 +741,23 @@ can also be used like
 start.GameBtn.addEventListenr('click', function(){
 console.log('Game is starting...')
 })
+
+### ARROW functions
+
+conts getWinner = (choice1, choice2) => {
+return choice1
+}
+
+arrow functions allows for shorter functions
+
+const add = (a,b) => a +b;
+
+## Quiz (Creating Functions)
+
+What's the difference between a function declaration and function expression?
+
+Function declarations automatically create variables that hold the function objects, function expressions don't do that - they return an object instead, it's your job to then do something with it (e.g. store it in a variable).
+
+What's an advantage of arrow functions?
+
+shorter syntax, Depending on the use-case and how you write the function, you can save a lot of code.
