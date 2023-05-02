@@ -761,3 +761,9 @@ Function declarations automatically create variables that hold the function obje
 What's an advantage of arrow functions?
 
 shorter syntax, Depending on the use-case and how you write the function, you can save a lot of code.
+
+What's an anonymous function?
+
+A functio without a name assigned.
+
+### Rest Parameters
