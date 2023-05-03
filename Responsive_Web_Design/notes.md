@@ -51,3 +51,39 @@ font-size: 12px
 }
 
 or no html tag at all
+
+general rule of thumb:
+
+font-size = rem
+pading and margin = rem
+witdhs = em or percentage
+
+not hard and fast rules
+
+em when sset to a certain element will space according to the font-size not the parent. e.g.
+
+button {
+display: inline-block;
+background: #FFE600;
+color:
+black;
+padding: .5em 1.25em;
+/_ em is relative to the font-size
+of this element _/ text-align: center;
+textedecoration: nones
+margin-bottom: 50px;
+}
+
+.btn-big {
+font-size: 1.5rem;
+}
+
+e.g.
+
+h1 {
+font-size: 24px;
+margin-bottom: 1em; /_ 24 px _/
+margin-bottom: 2em; /_ 48px _/
+}
+
+em is relative to the font-size
