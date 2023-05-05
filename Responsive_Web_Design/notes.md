@@ -87,3 +87,13 @@ margin-bottom: 2em; /_ 48px _/
 }
 
 em is relative to the font-size
+
+## Flexbox
+
+Elements normally have a display: block or a display: inline as a default from the browser.
+
+block elements : div,header,footer,main, h1 -> h6, p, list, list items
+
+inline elements: a, strong,em, span
+
+We can change this behavior by setting the display property to flex on the parent element.
