@@ -97,3 +97,32 @@ block elements : div,header,footer,main, h1 -> h6, p, list, list items
 inline elements: a, strong,em, span
 
 We can change this behavior by setting the display property to flex on the parent element.
+
+## Adding backgrowund color
+
+you can add aditional calsses to divs
+
+e.g <div class='col col-bg'> </div>
+
+## spacing out colums with flexbox
+
+justify-content:
+space-between;
+
+woould be added to the parent element.
+
+space-around would put space around each item. left, right, top, bottom.
+
+space-evenly, wuld make all space even.
+
+## control vertical position of items with flexbox
+
+align-items:
+
+flex-start would align items to the top of the div
+
+center would vertically center
+
+flex-end would align items to the end of the div.
+
+stretch would strech vertically on the div.
