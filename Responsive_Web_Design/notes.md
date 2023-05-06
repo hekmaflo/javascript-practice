@@ -126,3 +126,92 @@ center would vertically center
 flex-end would align items to the end of the div.
 
 stretch would strech vertically on the div.
+
+# Media queries - basics
+
+media queries let us add new styles that target only specific conditions.
+
+### syntax
+
+@media () {...}
+
+@media media-type and (media-features){}
+
+types of media:
+@media screen{...}
+
+@media print{...}
+
+@media speech{...}
+
+The media condition let's us target specific conditions within that media type
+
+widths - @media (min-width: 600px) {...}
+
+orientation - @media (orientation: landscape) {...}
+
+specific features @media (hover) {...}
+
+both media types and conditions are optional
+
+we do need to either have a type or condition.
+
+we can choose only a condition, such as the width of the viewport.
+
+@media (min-width: 960px) {...}
+
+you can combine a type with a condition by using and.
+
+@media screen and (min-width:960px) {...}
+
+@media screen and (orientation:portrait) {...}
+
+## min-width and max-width
+
+@media (min-width: 400px) {
+body {
+background: brown;
+}
+}
+
+this says: from a minimim width of 400px and bigger.
+
+meaning it would turn brown once its bigger than 400px
+
+order is important when doing media queries
+
+@media (min-width: 500px) and (orientation: landscape){
+body{
+...
+}
+}
+
+the code above would make changes if its above 500px or in landscpe orientation
+
+## Making out layout responsive with flex-direction
+
+flexbox - changing the axis around
+
+display: flex - creates columns
+
+flex-direction: row - default behavior.
+
+flex-direction: column; - switches the axis.
+
+e.g
+
+@media (max-width: 600px){
+.column {
+flex-direction: column
+}
+}
+
+best practice:
+
+@media (max-width: 600px){
+col-1, col-2, col-3 {
+width: 100%
+}
+}
+
+## Creating Navigation
