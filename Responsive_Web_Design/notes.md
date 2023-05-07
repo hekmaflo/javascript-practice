@@ -215,3 +215,11 @@ width: 100%
 }
 
 ## Creating Navigation
+
+<nav> 
+<ul>
+<li>Home</li>
+<li>about me</li>
+<li>recent posts</li>
+</ul>
+</nav>
