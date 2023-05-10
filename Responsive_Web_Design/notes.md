@@ -223,3 +223,9 @@ width: 100%
 <li>recent posts</li>
 </ul>
 </nav>
+
+### make sure you pay attention to detail
+
+## Make navigation responsive
+
+make sure you do media quieries after the selectors and not before because it will not work.
