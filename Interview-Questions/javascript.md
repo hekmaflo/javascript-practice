@@ -20,12 +20,16 @@ const hello = () = {
 console.log('gg')
 }
 
-## //the code above would not work.
+//the code above would not work.
 
 - What is Object.prototype & proto (and example with getPrototypeOf, setPrototypeOf)
-  What is the difference between a class and an object
-  7
+
+What is the difference between a class and an object?
+class
+7
+
 - What is the this keyword, when do we use it
+  is used inside a class or object to make sure you are using that spicific method or variable.
   8
 - What is the difference between a normal function and an arrow function
 - What is a promise
