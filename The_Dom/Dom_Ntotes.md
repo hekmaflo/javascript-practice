@@ -55,3 +55,38 @@ Available methods and properties depend on the kind of element
 can be selected om various different ways (via js)
 
 con be created and removed via JS
+
+## Selecting Elements in the DOM
+
+document.getElementById('main-title') <-- the argument will be the id of the element you want to choose.
+
+can be stored in a variable:
+const h1 = document.getElementById('main-ttle')
+
+to search in the child nodes you can now use another selector. e.g
+
+h1.querySelectorAll
+
+document,getElementByClassName('list-item') will allow to choose elements by className which will be a collection if there is more than one item.
+
+more common to use:
+
+document.querySelector('.list-item')
+
+document.querySelectorAll('.list-item')
+
+you have to have either a . or a # to choose the corresponding class or id
+
+e.g.
+
+const ul = document.querySelector('ul')
+
+ul.querySelector('li')
+
+will give you the first element of the unordered list.
+
+## make sure you place your JS script at the rigth place.
+
+you need to either put the script at the very end of your HTML code or added to your HEAD after title and add defer like so:
+
+<script src="app.js" defer></script>
