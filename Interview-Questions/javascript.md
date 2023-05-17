@@ -33,11 +33,19 @@ class
   8
 - What is the difference between a normal function and an arrow function
 - What is a promise
+  A way to run async code to back end and be able to run code
+  so if you make a call to an api and it's successful it would then run the code in the .then() if it dosent work it will run the code in the .catch() it usually just gives back a consle error e.g. .catch(console.error) and lastly you can use a .finally() to run additional code
   10
 - How do we use promises outside of async/await
+
   11 - What does it mean for something to be mutable and immutable? Which types of variables are mutable and
   which are immutable? (with some follow-up questions on mutability in React)
+  mutable means a variabke that its able to change in the future.
+
+  immutable means that that it wont be able to change and it will remain the same.
+
   12
+
 - What is closure and give an example
   13
 - Why are block-scoped (rather function-scoped) variables not available after we've exited a function
